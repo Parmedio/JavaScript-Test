@@ -12,10 +12,18 @@
                 margin-right: 15%;
                 min-width: 380px;
             }
+            
+            h2 {
+                margin: 0px 0px 40px 0px;
+            }
 
-            #db-container{
-                border-radius: 2px;
-                border: 1px solid rgb(207, 207, 207);
+            #search-filler{
+                width: 66px;
+                padding: 6px 12px;
+                color: white;
+            }
+            #insert-button{
+                width: 66px;
             }
 
             #data-manipulation-dashbord{
@@ -29,54 +37,48 @@
                 text-align: end;
                 padding: 0px 20px 0px 0px;
             }
-            
-            #player-score{
-                display: none;
+
+            .db-element{
+                display: flex;
                 align-items: center;
-                justify-content: start;
+                justify-content: center;
             }
-            
-            #complete-game-message{
-                display: none;
-                text-align: center;
-                flex-grow: 1;
-                color: rgb(0, 148, 62);
-                background: radial-gradient(circle, rgba(0,255,158,1) 0%, rgba(255,255,255,1) 60%);
-            }
-
-            h2 {
-                margin: 0px 0px 40px 0px;
-            }
-
+                       
             #input-area{
                 margin: 20px 0px 0px 0px;
             }
 
-            #search-filler{
-                width: 66px;
-                padding: 6px 12px;
-                color: white;
-            }
-            #insert-button{
-                width: 66px;
-            }
-            
-            .footer{
-                margin: 0px;
-                margin-right: 10px;
-                margin-top: 16px;
-            }
-
             .col{
-                width: 100%; /*height: 10vh*/
-                aspect-ratio: 1/1;
+                width: 100%;
+                margin: 0px;
+                padding: 1px 6px;
                 border-top: 1px solid rgb(207, 207, 207);
                 border-bottom: 1px solid rgb(207, 207, 207);
                 border: 1px solid rgb(207, 207, 207);
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: start;
             }
+
+            .col-filler{
+                width: 100%;
+                margin: 0px;
+                padding: 1px 6px;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+            }
+            .user-button-filler{
+                padding: 1px 6px;
+                color: white;
+                background: white;
+                border-color: white;
+            }
+
+            #db-container{
+                display: none;
+            }
+
         </style>
     </head>
     <body>
@@ -96,7 +98,7 @@
                     <input class="form-control" id="insert-update-name-input" placeholder="name">
                     <input class="form-control" id="insert-update-surname-input" placeholder="surname">
                     <input class="form-control" id="insert-update-email-input" placeholder="email">
-                    <button class="btn btn-outline-secondary" id="insert-button">Insert</button>
+                    <button class="btn btn-outline-secondary" id="insert-button" disabled="true">Insert</button>
                 </div>
             </div>
             <div id="data-manipulation-dashbord">
@@ -109,7 +111,15 @@
                 <p id="search-filler">Insert</p>
             </div>
         </div>
-        <div class="container text-center" id="db-container">ciao</div>
+        <div class="container text-center" id="db-container">
+            <div class="db-element">
+                <p class="col-filler">Name</p>
+                <p class="col-filler">Surname</p>
+                <p class="col-filler">Email</p>
+                <p class="user-button-filler" id="update-button">Update</p>
+                <p class="user-button-filler" id="delete-button">Delete</p>
+            </div>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>
