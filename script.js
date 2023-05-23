@@ -82,7 +82,6 @@ const insertUser = () => {
     isUpdating = false;
 }
 
-
 const checkInputs = () => {
     if (insertUpdateNameInput.value && insertUpdateSurnameInput.value && insertUpdateEmailInput.value || isUpdating === true) {
         insertButton.disabled = false;
@@ -106,7 +105,20 @@ const updateUser = (userId) => {
 // const filteredname = .displayedname.filter(currentValue => {
 //     return currentValue.name.toLowerCase().includes(this.state.searchfield.toLowerCase()
 // }
-    
+
+
+
+// function checkDivContent() {
+//   if (dbContainer.childElementCount < 7) {
+//     dbContainer.style.display = "none";
+//   } else {
+//     dbContainer.style.display = "block"; 
+//   }
+// }
+
+// document.addEventListener("DOMContentLoaded", checkDivContent);
+// dbContainer.addEventListener("DOMSubtreeModified", checkDivContent);
+
     
 insertUpdateNameInput.addEventListener('input', checkInputs);
 insertUpdateSurnameInput.addEventListener('input', checkInputs);
